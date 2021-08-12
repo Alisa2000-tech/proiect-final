@@ -1,0 +1,385 @@
+body {
+  font-family: "Roboto", sans-serif;
+  padding-top: 40px;
+  background-color: $color3;
+}
+::placeholder {
+  color: $color4;
+}
+header {
+  z-index: 100;
+  background-color: $color2;
+  padding: 5px 0;
+  border-bottom: 0.5px solid $color4;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  & form {
+    position: relative;
+    & input {
+      background-color: $color3;
+      display: block;
+      width: 100%;
+      min-width: 200px;
+      padding: 5px 10px;
+      border-radius: 5px;
+    }
+    & button {
+      background-color: transparent;
+      border: unset;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 70px;
+      & div:first-child {
+        display: flex;
+      }
+      & .fa-search {
+        position: relative;
+        right: 5px;
+      }
+    }
+  }
+}
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 15px;
+  & .logo {
+    font-family: "Dancing Script", cursive;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: flex;
+}
+.nav-link {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  position: relative;
+  & .img3 {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: block;
+    cursor: pointer;
+  }
+  & .fa-home,
+  .fa-envelope,
+  .fa-share,
+  .fa-heart {
+    font-size: 25px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  & .badge {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    line-height: 10px;
+    padding: 4px;
+    background-color: $color5;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    right: 3px;
+  }
+}
+.before-base {
+  background-color: $color2;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  padding: 7px;
+  border-radius: 5px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  & li {
+    position: relative;
+    padding: 0 0 15px 10px;
+  }
+  & .line::after {
+    content: "";
+    display: block;
+    height: 1px;
+    background: $color3;
+    position: absolute;
+    margin-bottom: 5px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+  }
+}
+.dropdown {
+  @extend .before-base;
+  min-width: 200px;
+  & .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    & :hover {
+      background-color: $color3;
+    }
+  }
+  & .fa-user-circle,
+  .fa-cog,
+  .fa-bookmark,
+  .fa-toggle-on {
+    margin-right: 10px;
+  }
+}
+
+.dropdown-notification {
+  @extend .before-base;
+  min-width: 500px;
+  & .content-notification {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0 15px 0;
+  }
+  & span {
+    font-weight: bold;
+  }
+  & .img1 {
+    height: 40px;
+    width: 40px;
+    display: block;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  & .img2 {
+    height: 40px;
+    width: 40px;
+    display: block;
+  }
+  & .buton {
+    font-size: 15px;
+    padding: 5px;
+    margin: 5px;
+    background-color: transparent;
+    border: 1px solid $color15;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+}
+
+.container-feed {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  & aside {
+    width: 300px;
+    height: 2000px;
+    padding-top: 20px;
+    padding-left: 20px;
+    font-size: 13px;
+    & .head-aside {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & img {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        margin-right: 5px;
+      }
+      & p:first-child {
+        font-weight: bold;
+        margin-bottom: 3px;
+      }
+      & p:nth-child(2) {
+        color: $color6;
+      }
+    }
+
+    & .middle-aside {
+      margin-top: 25px;
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & p:first-child {
+        color: $color7;
+      }
+    }
+
+    & .footer-aside {
+      margin-top: 30px;
+      margin-left: 6px;
+      & img {
+        width: 30px;
+        height: 30px;
+        border-radius: 50px;
+        margin-right: 10px;
+      }
+    }
+    & .footer2 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+      & p:first-child {
+        font-weight: bold;
+      }
+      & p:nth-child(2) {
+        color: $color6;
+      }
+    }
+    & span {
+      color: $color8;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    & .sticky {
+      position: sticky;
+      z-index: -1;
+      top: 50px;
+    }
+    & .author {
+      display: flex;
+      align-items: center;
+    }
+  }
+  & main {
+    width: 700px;
+    height: 2000px;
+    & span {
+      font-weight: bold;
+    }
+    & .icons {
+      display: flex;
+      justify-content: space-between;
+      margin: 15px;
+      position: relative;
+    }
+    & .author,
+    .comm-section {
+      display: flex;
+      align-items: center;
+    }
+    & .top-post {
+      background-color: $color2;
+      border: 1px solid $color4;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      min-height: 100px;
+      & .image-post {
+        position: relative;
+        border-radius: 50%;
+        display: block;
+        height: 60px;
+        width: 60px;
+        margin: 15px 15px 5px 15px;
+        box-shadow: 0 0 0 2px $color14, 0 0 0 4px $color5;
+      }
+      & .user-name {
+        font-size: 12px;
+        margin-bottom: 5px;
+        text-align: center;
+      }
+    }
+
+    & .single-post {
+      background-color: $color2;
+      border: 1px solid $color4;
+      border-radius: 5px;
+      min-height: 970px;
+      margin-top: 15px;
+      .likes .line::after {
+        content: "";
+        display: block;
+        height: 1px;
+        background: $color3;
+        position: absolute;
+        margin-top: 5px;
+        left: 0;
+        right: 0;
+        top: 5;
+      }
+      & .head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        & img {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          margin: 10px;
+        }
+      }
+      & .likes p {
+        margin-top: 5px;
+        margin-left: 15px;
+      }
+      & .fa-heart,
+      .fa-comment,
+      .fa-paper-plane,
+      main .fa-bookmark {
+        font-size: 25px;
+        cursor: pointer;
+      }
+      & .fa-heart,
+      .fa-comment {
+        margin-right: 10px;
+      }
+
+      & .fa-ellipsis-h {
+        margin-right: 10px;
+      }
+      & .post-content img {
+        width: 100%;
+      }
+    }
+    & .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      & > div {
+        margin: 10px;
+      }
+      & p:first-child {
+        color: $color9;
+        cursor: pointer;
+      }
+      & .fa-smile-beam {
+        font-size: 25px;
+        margin-right: 10px;
+      }
+
+      & .comm-section p {
+        color: $color10;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  aside {
+    display: none;
+  }
+  header form {
+    display: none;
+  }
+  main {
+    margin-left: -16px;
+  }
+  .container-feed main .single-post {
+    min-height: 830px;
+  }
+}

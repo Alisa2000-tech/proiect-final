@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Newsfeed</title>
+    <script>
+      if (localStorage.token === undefined) {
+        window.location.href = "./login.html";
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body id="newsfeed" onload="loadingScreen()">
+    <div id="loader"></div>
+    <div id="myDiv"  class="animate-bottom">
+    <header>
+      <div class="container header-container">
+        <div>
+          <p class="logo">Instagram</p>
+        </div>
+      <div>
+        <form action="newsfeed.html" method="GET">
+          <input type="search" name="s" class="input"/>      
+        <button type="submit">
+          <div>
+            <i class="fas fa-search"></i>
+            <p>Cauta</p>
+          </div>
+        </button>
+     </form>
+      </div>
+      <nav>
+        <div class="nav-link">
+          <i class="fas fa-home"></i>
+        </div>
+        <div class="nav-link">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <div class="nav-link">
+          <i class="fas fa-share"></i>
+        </div>
+        <div class="nav-link" >
+          <i  onclick="show()" class="far fa-heart"></i>
+          <span onclick="show()" class="badge" id="notification_badge">11</span>
+          <ul style="display: none;" id="dropdownChange"  class="dropdown-notification">           
+             <span id="demo"></span>
+    
+         </ul>
+        </div>
+        <div class="nav-link">
+          <img  onclick="show_hide(), changeBorder()" class="hover-img img3" id="borderChange" src="https://source.unsplash.com/40x40" alt="" />
+          <ul style="display: none;" id="list-items" class="dropdown ">
+              <li>
+                  <div class="content">
+                    <i class="far fa-user-circle"></i>
+                    <p>Profil</p>
+                  </div>
+              </li>
+              <li>
+                <div class="content">
+                    <i class="fas fa-cog"></i>
+                    <p>Setari</p>
+                </div>
+            </li>
+            <li>
+                <div class="content">
+                    <i class="far fa-bookmark"></i>
+                    <p>Salvate</p>
+                </div>
+            </li>
+            <li>
+                <div class="content line">
+                    <i class="fas fa-toggle-on"></i>
+                    <p>Schimba cont</p>
+                </div>
+            </li>
+            <li>
+                <div id="logOut" class="content">
+                    <p>Deconectare</p>
+                </div>
+            </li>
+          </ul>
+        </div>
+    </div>
+      </nav>
+  </header>
+  <div class="container container-feed">
+  <main>  
+    <div class="top-post" id="topPost">
+    </div>
+    <div  id="mainPost">
+    
+    </div>  
+  </main>
+  <aside>
+    <div class="sticky" id="sideBar">
+      <div class="head-aside">
+        <div class="author">
+          <img src="https://source.unsplash.com/60x60" alt="">
+          <div>
+            <p>alisa_2000</p>
+            <p>Alisa Ardeoaica</p>
+          </div>
+        </div>
+        <div>
+          <span>Schimba</span>
+        </div>
+      </div>
+      <div class="middle-aside">
+        <p>Sugestii pentru tine</p>
+        <p>Vezi tot</p>
+      </div>
+  </div>
+  </aside>
+</div>
+    </div>
+    <script src="js/newsfeed.js"></script>
+</body>
+
+</html>

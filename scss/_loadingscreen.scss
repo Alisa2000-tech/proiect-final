@@ -1,0 +1,59 @@
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 120px;
+  height: 120px;
+  margin: -76px 0 0 -76px;
+  border: 3px solid $color2;
+  border-radius: 50%;
+  background: linear-gradient($color11, $color13);
+  box-shadow: 0px 0px 100px -50px $color15;
+  animation: spin 2s linear infinite;
+}
+
+#loader::before {
+  position: absolute;
+  content: "";
+  background: $color14;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  border: 3px solid $color2;
+  box-shadow: inset 0px 0px 100px -70px $color16;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  animation-name: animatebottom;
+  animation-duration: 1s;
+}
+
+@keyframes animatebottom {
+  from {
+    bottom: -100px;
+    opacity: 0;
+  }
+  to {
+    bottom: 0;
+    opacity: 1;
+  }
+}
+
+#myDiv {
+  display: none;
+}

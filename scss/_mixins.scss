@@ -1,0 +1,33 @@
+@mixin default-body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+@mixin form {
+  width: 100%;
+  max-width: 1000px;
+  min-height: 500px;
+  padding: 15px 20px;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+@mixin first-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  color: $color2;
+}
+@mixin last-child {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}

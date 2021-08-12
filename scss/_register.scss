@@ -1,0 +1,123 @@
+body {
+  @include default-body;
+}
+.register_form {
+  @include form;
+  & h2:last-child {
+    font-family: Dancing Script, cursive;
+  }
+  & div:first-child {
+    @include last-child;
+    width: 60%;
+    background-color: $color1;
+    & input:not([type="submit"] [type="checkbox"]) {
+      display: block;
+      padding: 7px 15px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      border-radius: 16px;
+    }
+    & .button {
+      background-image: linear-gradient(to right, $color11, $color12, $color13);
+      color: $color2;
+      cursor: pointer;
+      margin-top: 5px;
+      margin-left: 40px;
+      width: 40%;
+      position: relative;
+      overflow: hidden;
+      background-size: 200% auto;
+      transition: 0.6s;
+      &:hover {
+        background-position: right center;
+      }
+    }
+    & label {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      & .relative {
+        position: relative;
+        bottom: 2px;
+        right: 7px;
+      }
+      & :nth-child(2) {
+        color: $color11;
+        position: relative;
+        left: 3px;
+      }
+    }
+  }
+
+  @include form;
+  & div:last-child {
+    @include first-child;
+    background: linear-gradient(to bottom, $color11, $color12, $color13);
+    width: 40%;
+    & p {
+      margin-top: 15px;
+      margin-bottom: 15px;
+    }
+    & a {
+      background-color: transparent;
+      padding: 5px 30px;
+      border-radius: 15px;
+      border: 1px solid $color2;
+      cursor: pointer;
+      font-size: 18px;
+      margin-top: 10px;
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: transparent;
+        height: 0;
+        z-index: 1;
+        transition: all 0.6s;
+      }
+      & span {
+        position: relative;
+        z-index: 2;
+      }
+      &:hover {
+        color: $color11;
+        &::before {
+          height: 100%;
+          background-color: $color2;
+          font-size: 18px;
+          border-radius: 15px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .register_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    & div:last-child {
+      width: 100%;
+      & h2 {
+        margin-top: 10px;
+      }
+      & a {
+        margin-bottom: 10px;
+      }
+    }
+    & div:first-child {
+      width: 100%;
+      & h2 {
+        margin-top: 10px;
+      }
+      & .button {
+        margin-right: 30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+    <!-- <script>
+      if (localStorage.token !== undefined) {
+        window.location.href = "./newsfeed.html";
+      }
+    </script> -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="register_form">
+      <div class="side_left">
+        <h2>Register</h2>
+        <p id="register_error"></p>
+        <input
+          type="text"
+          placeholder="First name"
+          required
+          name="first_name"
+          id="register_fname"
+        />
+        <input
+          type="text"
+          placeholder="Last name"
+          required
+          name="last_name"
+          id="register_lname"
+        />
+        <input
+          type="email"
+          placeholder="Email adress"
+          required
+          name="mail"
+          id="register_mail"
+        />
+        <input
+          type="password"
+          placeholder="Password"
+          required
+          name="pass1"
+          id="register_pass1"
+        />
+        <input
+          type="password"
+          placeholder="Repet password"
+          required
+          name="pass2"
+          id="register_pass2"
+        />
+        <label for="">
+          <input class="relative" type="checkbox" id="register_newsletter" /> I
+          want to subscribe to newsletter
+        </label>
+        <label for="">
+          <input class="relative" type="checkbox" id="register_terms" /> I agree
+          with
+          <span>Terms and Conditions</span>
+        </label>
+        <input
+          class="button"
+          type="submit"
+          value="Create my account"
+          id="register_button"
+        />
+      </div>
+      <div class="side_right">
+        <h2>Hello, friend!</h2>
+        <p>Enter your personal details and start your journey.</p>
+        <p>Already have an account?</p>
+        <p>Log in here <i class="fas fa-arrow-circle-down"></i></p>
+        <a href="login.html"><span>Log in</span></a>
+      </div>
+    </div>
+    <script src="js/register.js"></script>
+  </body>
+</html>

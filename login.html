@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in</title>
+    <script>
+      if (localStorage.token !== undefined) {
+        window.location.href = "./newsfeed.html";
+      }
+    </script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="login_form">
+      <div class="side_left">
+        <h2>Welcome back!</h2>
+        <p>Don't have an account?</p>
+        <p>Register here <i class="fas fa-arrow-circle-down"></i></p>
+        <a href="register.html"><span>Register</span></a>
+      </div>
+      <div class="side_right">
+        <h2>Log in</h2>
+        <form action="index.html" method="POST">
+          <p id="log_error"></p>
+          <input
+            type="email"
+            placeholder="Email adress"
+            required
+            name="mail"
+            id="log_email"
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            required
+            name="pass"
+            id="log_pass"
+          />
+          <label for="">
+            <input class="relative" type="checkbox" />
+            Remember me
+          </label>
+          <input class="button" type="submit" value="Log in" id="log_button" />
+        </form>
+      </div>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>
